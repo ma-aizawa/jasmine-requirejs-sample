@@ -6,8 +6,10 @@ require.config({
   urlArgs: 't=' + (new Date()).getTime()
 });
 
-require(['src/util'], function(util) {
+require(['src/util', 'jquery'], function(util, $) {
   $(function() {
+    console.log('define');
     util.kick();
   });
 });
+
